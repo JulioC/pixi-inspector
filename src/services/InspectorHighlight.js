@@ -39,8 +39,8 @@ export default class InspectorHighlight {
       box.lineStyle(1, 0x007eff, 0.6);
       const bounds = node.getBounds();
       const scale = {
-        x: this.gui.resolution.x / renderer.resolution,
-        y: this.gui.resolution.y / renderer.resolution
+        x: 1 / renderer.resolution,
+        y: 1 / renderer.resolution
       };
       box.drawRect(
         bounds.x * scale.x,
